@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Agro | Default Case — 6.4.11</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <button type="button" class="menu-toggle" aria-label="Open menu">☰</button>
+  <div class="sidebar-backdrop"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🌾</div>
+        <h1>Smart Agro</h1>
+        <p>Deep Learning Based Pesticides Recommendation Framework for Plant Disease Control</p>
+      </div>
+      <ul class="nav-tabs">
+        <li><a href="home.html" class="nav-tab"><span class="icon">🏠</span> Home</a></li>
+        <li><a href="result.html" class="nav-tab"><span class="icon">📊</span> Result</a></li>
+      </ul>
+      <ul class="sidebar-extra">
+        <li><a href="default.html">6.4.11 Default Case</a></li>
+        <li><a href="index.html">6.4.1 Home Page</a></li>
+        <li><a href="user-guide.html">6.4.8 User Guide</a></li>
+      </ul>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="report-header">
+        <div class="logo-text">SMART AGRO</div>
+        <p class="logo-sub">Department of CSE (Artificial Intelligence), PEC — Default landing state</p>
+      </header>
+
+      <main class="page-view">
+        <div class="default-hero">
+          <div class="big-icon">🌿</div>
+          <h2 class="page-title" style="-webkit-text-fill-color: var(--text);">Welcome — Default Case</h2>
+          <p class="page-subtitle" style="margin: 0 auto 1.5rem;">
+            No image uploaded yet. Start by visiting the Home tab or use the sample leaf
+            (Apple Black Rot) for a demo prediction.
+          </p>
+          <div class="btn-row">
+            <a href="home.html" class="btn btn-primary">Upload Plant Image</a>
+            <a href="home.html#sample" class="btn btn-secondary">Use Sample Leaf</a>
+          </div>
+        </div>
+
+        <div class="hero-banner">
+          <div>
+            <h3 style="color: var(--accent); margin-bottom: 0.75rem;">CNN Model (39 Classes)</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Input 224×224 · 52.6M parameters · Conv2d + BatchNorm + MaxPool → Linear output.
+            </p>
+            <div class="hero-stats">
+              <span class="stat-pill">39 Diseases</span>
+              <span class="stat-pill">224×224 px</span>
+              <span class="stat-pill">Deep Learning</span>
+            </div>
+          </div>
+          <div class="model-img-wrap">
+            <img src="assets/images/model-architecture.png" alt="CNN model architecture summary" />
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/particles.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/layout.js"></script>
+</body>
+</html>

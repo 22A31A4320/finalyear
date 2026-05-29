@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Agro — Pesticides</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <button type="button" class="menu-toggle" aria-label="Menu">☰</button>
+  <div class="sidebar-backdrop"></div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><h1>Smart Agro Deep Learning Pesticides Recommendation Framework</h1></div>
+      <ul class="nav-tabs">
+        <li><a href="home.html" class="nav-tab active"><span class="icon">🏠</span> Home</a></li>
+        <li><a href="result.html" class="nav-tab"><span class="icon">📈</span> Result</a></li>
+      </ul>
+    </aside>
+    <div class="main-wrap">
+      <nav class="top-nav">
+        <a href="disease.html">Disease</a>
+        <a href="pesticides.html" class="active">Pesticides</a>
+        <a href="about.html">About</a>
+        <a href="user-guide.html">Guide</a>
+        <a href="team.html">Team</a>
+      </nav>
+      <main class="page-view">
+        <div class="page-header">
+          <div class="icon">🧪</div>
+          <h1 class="page-title">Pesticides &amp; Supplements</h1>
+          <p class="page-subtitle">Mapped recommendations per CNN disease class</p>
+        </div>
+        <div class="content-panel">
+          <h2>Common recommendations</h2>
+          <ul style="margin:0.75rem 0 0 1.25rem;color:var(--text-muted);line-height:1.9;">
+            <li>Apple Black Rot → Captan + Thiophanate-methyl</li>
+            <li>Peach Bacterial Spot → SCORE FUNGICIDE / Copper</li>
+            <li>Corn Gray Leaf Spot → Azoxystrobin</li>
+            <li>Tomato Late Blight → Chlorothalonil + Metalaxyl</li>
+            <li>Healthy plants → No treatment required</li>
+          </ul>
+        </div>
+      </main>
+      <footer class="site-footer">🌱 Smart Agro • Deep Learning • CNN • Plant Disease Detection • Final Year Project</footer>
+    </div>
+  </div>
+  <script src="js/particles.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

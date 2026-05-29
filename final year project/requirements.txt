@@ -1,0 +1,2 @@
+# Vercel serverless (lightweight — no PyTorch on free tier)
+Pillow>=10.0.0

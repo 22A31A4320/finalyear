@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Agro — Plant Diseases</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <button type="button" class="menu-toggle" aria-label="Menu">☰</button>
+  <div class="sidebar-backdrop"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><h1>Smart Agro Deep Learning Pesticides Recommendation Framework</h1></div>
+      <ul class="nav-tabs">
+        <li><a href="home.html" class="nav-tab active"><span class="icon">🏠</span> Home</a></li>
+        <li><a href="result.html" class="nav-tab"><span class="icon">📈</span> Result</a></li>
+      </ul>
+    </aside>
+    <div class="main-wrap">
+      <nav class="top-nav">
+        <a href="disease.html" class="active">Disease</a>
+        <a href="pesticides.html">Pesticides</a>
+        <a href="about.html">About</a>
+        <a href="user-guide.html">Guide</a>
+        <a href="team.html">Team</a>
+      </nav>
+      <main class="page-view">
+        <div class="page-header">
+          <div class="icon">🌱</div>
+          <h1 class="page-title">Plant Diseases</h1>
+          <p class="page-subtitle">Diseases our AI model can detect across 14+ plant varieties</p>
+        </div>
+        <div class="content-panel">
+          <h2>🍃 Supported Plants &amp; Diseases (39)</h2>
+          <p style="color:var(--text-muted);margin:0.75rem 0 0;">
+            Upload a leaf image to get instant detection. We identify fungal infections, bacterial diseases,
+            viral issues, and healthy plant states.
+          </p>
+          <div class="pill-grid" id="disease-pills"></div>
+        </div>
+      </main>
+      <footer class="site-footer">🌱 Smart Agro • Deep Learning • CNN • Plant Disease Detection • Final Year Project</footer>
+    </div>
+  </div>
+  <script src="js/classes.js"></script>
+  <script src="js/disease-db.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    SmartAgroDB.getAllPills().then((pills) => {
+      document.getElementById("disease-pills").innerHTML =
+        pills.map((p) => `<span class="pill">${p}</span>`).join("");
+    });
+  </script>
+</body>
+</html>

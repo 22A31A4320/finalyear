@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Agro — Result</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <button type="button" class="menu-toggle" aria-label="Menu">☰</button>
+  <div class="sidebar-backdrop"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Smart Agro Deep Learning Pesticides Recommendation Framework</h1>
+      </div>
+      <ul class="nav-tabs">
+        <li><a href="home.html" class="nav-tab"><span class="icon">🏠</span> Home</a></li>
+        <li><a href="result.html" class="nav-tab active"><span class="icon">📈</span> Result</a></li>
+      </ul>
+    </aside>
+
+    <div class="main-wrap">
+      <nav class="top-nav" aria-label="Sections">
+        <a href="disease.html">Disease</a>
+        <a href="pesticides.html">Pesticides</a>
+        <a href="about.html">About</a>
+        <a href="user-guide.html">Guide</a>
+        <a href="team.html">Team</a>
+      </nav>
+
+      <main class="page-view">
+        <h1 class="result-hero-title" id="result-title">—</h1>
+        <p class="result-hero-sub">AI Analysis Result</p>
+
+        <div class="result-grid-2">
+          <article class="info-card">
+            <div class="result-image-box">
+              <img id="result-preview" src="assets/images/sample-leaf-apple-black-rot.png" alt="Analyzed leaf" />
+            </div>
+            <p class="result-image-label">🖼️ Analyzed Image</p>
+          </article>
+          <article class="info-card">
+            <h3>ℹ️ Brief Description</h3>
+            <p id="out-description">—</p>
+          </article>
+        </div>
+
+        <div class="result-grid-2">
+          <article class="info-card">
+            <h3>🛡️ Prevention Steps</h3>
+            <p id="out-prevention">—</p>
+          </article>
+          <article class="info-card">
+            <h3>🧪 Recommended Pesticides / Supplements</h3>
+            <img id="supplement-image" src="" alt="Recommended product" style="max-width:120px;border-radius:8px;margin-bottom:0.75rem;display:none;" />
+            <p class="pesticide-name" id="out-pesticide">—</p>
+            <p id="out-confidence" style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;">—</p>
+            <a id="buy-link" class="btn btn-orange" href="#" style="display:none;">
+              🛒 Buy Recommended
+            </a>
+          </article>
+        </div>
+
+        <div class="center-actions">
+          <a href="home.html" class="btn btn-primary">🔄 Analyze Another Image</a>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        🌱 Smart Agro • Deep Learning • CNN • Plant Disease Detection • Final Year Project
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/classes.js"></script>
+  <script src="js/disease-db.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/confetti.js"></script>
+  <script src="js/result.js"></script>
+</body>
+</html>

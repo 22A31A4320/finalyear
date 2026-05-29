@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Agro — Base Template</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!--
+    BASE TEMPLATE — copy structure into other pages.
+    Smart Agro: Deep Learning Based Pesticides Recommendation Framework
+  -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <button type="button" class="menu-toggle" aria-label="Open menu">☰</button>
+  <div class="sidebar-backdrop"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🌾</div>
+        <h1>Smart Agro</h1>
+        <p>Deep Learning Pesticides Recommendation for Plant Disease Control</p>
+      </div>
+      <ul class="nav-tabs">
+        <li><a href="home.html" class="nav-tab"><span class="icon">🏠</span> Home</a></li>
+        <li><a href="result.html" class="nav-tab"><span class="icon">📊</span> Result</a></li>
+      </ul>
+      <div class="sidebar-footer">Final Year Project · Plant Disease AI</div>
+    </aside>
+
+    <div class="main-wrap">
+      <!-- PAGE CONTENT GOES HERE -->
+      <main class="page-view page-enter">
+        <p>Replace this block in child pages.</p>
+      </main>
+    </div>
+  </div>
+
+  <div id="loader" class="loader-overlay" role="status" aria-live="polite">
+    <div class="loader-ring"></div>
+    <p>Analyzing plant image…</p>
+  </div>
+
+  <script src="js/particles.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/confetti.js"></script>
+</body>
+</html>

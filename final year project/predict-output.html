@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Agro | Prediction Output — 6.4.4</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <button type="button" class="menu-toggle" aria-label="Open menu">☰</button>
+  <div class="sidebar-backdrop"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🌾</div>
+        <h1>Smart Agro</h1>
+        <p>Deep Learning Based Pesticides Recommendation Framework for Plant Disease Control</p>
+      </div>
+      <ul class="nav-tabs">
+        <li><a href="home.html" class="nav-tab"><span class="icon">🏠</span> Home</a></li>
+        <li><a href="result.html" class="nav-tab active"><span class="icon">📊</span> Result</a></li>
+      </ul>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="report-header">
+        <div class="logo-text">SMART AGRO</div>
+        <p class="logo-sub">Department of CSE (Artificial Intelligence), PEC</p>
+      </header>
+
+      <main class="page-view">
+        <h2 class="page-title">Prediction Output — Pesticide Recommendation</h2>
+        <p class="page-subtitle">CNN classification result and recommended treatment.</p>
+
+        <div class="split-result">
+          <div class="result-image-wrap" style="display: block;">
+            <img id="result-preview" src="assets/images/sample-leaf-apple-black-rot.png" alt="Analyzed plant leaf" />
+          </div>
+          <div class="result-grid" style="grid-template-columns: 1fr;">
+            <article class="result-card">
+              <h3>Detected Disease</h3>
+              <p class="value" id="out-disease">—</p>
+            </article>
+            <article class="result-card">
+              <h3>Confidence</h3>
+              <p class="value" id="out-confidence">—</p>
+            </article>
+            <article class="result-card">
+              <h3>Recommended Pesticide</h3>
+              <p class="value" id="out-pesticide">—</p>
+            </article>
+            <article class="result-card">
+              <h3>Dosage & Application</h3>
+              <p class="value" id="out-dosage">—</p>
+            </article>
+            <article class="result-card">
+              <h3>Crop / Model Class</h3>
+              <p class="value" id="out-crop">—</p>
+              <p class="value" style="font-size: 0.9rem; margin-top: 0.35rem;" id="out-class">—</p>
+            </article>
+            <article class="result-card">
+              <h3>Safety</h3>
+              <p class="value" id="out-safety">—</p>
+              <p class="value emoji-line" id="out-emoji">🌾</p>
+            </article>
+          </div>
+        </div>
+
+        <p style="margin-top: 2rem;">
+          <a href="result.html" class="btn btn-primary">View Full Result Page →</a>
+          <a href="home.html" class="btn btn-secondary" style="margin-left: 0.5rem;">New Upload</a>
+        </p>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/particles.js"></script>
+  <script src="js/confetti.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/result.js"></script>
+</body>
+</html>

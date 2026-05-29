@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Agro — User Guide</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <button type="button" class="menu-toggle" aria-label="Menu">☰</button>
+  <div class="sidebar-backdrop"></div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><h1>Smart Agro Deep Learning Pesticides Recommendation Framework</h1></div>
+      <ul class="nav-tabs">
+        <li><a href="home.html" class="nav-tab active"><span class="icon">🏠</span> Home</a></li>
+        <li><a href="result.html" class="nav-tab"><span class="icon">📈</span> Result</a></li>
+      </ul>
+    </aside>
+    <div class="main-wrap">
+      <nav class="top-nav">
+        <a href="disease.html">Disease</a>
+        <a href="pesticides.html">Pesticides</a>
+        <a href="about.html">About</a>
+        <a href="user-guide.html" class="active">Guide</a>
+        <a href="team.html">Team</a>
+      </nav>
+      <main class="page-view">
+        <div class="page-header">
+          <div class="icon">📖</div>
+          <h1 class="page-title">User Guide</h1>
+          <p class="page-subtitle">How to get the best results from Smart Agro</p>
+        </div>
+        <div class="content-panel" style="margin-bottom:1rem;">
+          <h2>▶ Quick Start (3 Steps)</h2>
+          <ol class="guide-steps" style="margin-top:1rem;">
+            <li><strong>Step 1:</strong> Go to Home — Click Home in the left sidebar.</li>
+            <li><strong>Step 2:</strong> Upload Image — Drag &amp; drop or click to select a clear photo of the plant leaf.</li>
+            <li><strong>Step 3:</strong> View Result — Click Upload &amp; Analyze. Results show disease name, description, prevention, and pesticides.</li>
+          </ol>
+        </div>
+        <div class="content-panel">
+          <h2>📷 Tips for Best Results</h2>
+          <ul style="margin:0.75rem 0 0 1.25rem;color:var(--text-muted);line-height:1.8;">
+            <li>Use good lighting</li>
+            <li>Close-up shot of a single leaf</li>
+            <li>Supported formats: <strong>PNG, JPG, JPEG, GIF, WEBP</strong> (max 16MB)</li>
+            <li>Model resizes images to <strong>224×224</strong> for CNN input</li>
+          </ul>
+        </div>
+      </main>
+      <footer class="site-footer">🌱 Smart Agro • Deep Learning • CNN • Plant Disease Detection • Final Year Project</footer>
+    </div>
+  </div>
+  <script src="js/particles.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

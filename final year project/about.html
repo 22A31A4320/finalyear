@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Agro — About</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <button type="button" class="menu-toggle" aria-label="Menu">☰</button>
+  <div class="sidebar-backdrop"></div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><h1>Smart Agro Deep Learning Pesticides Recommendation Framework</h1></div>
+      <ul class="nav-tabs">
+        <li><a href="home.html" class="nav-tab active"><span class="icon">🏠</span> Home</a></li>
+        <li><a href="result.html" class="nav-tab"><span class="icon">📈</span> Result</a></li>
+      </ul>
+    </aside>
+    <div class="main-wrap">
+      <nav class="top-nav">
+        <a href="disease.html">Disease</a>
+        <a href="pesticides.html">Pesticides</a>
+        <a href="about.html" class="active">About</a>
+        <a href="user-guide.html">Guide</a>
+        <a href="team.html">Team</a>
+      </nav>
+      <main class="page-view">
+        <div class="page-header">
+          <div class="icon">🤖</div>
+          <h1 class="page-title">About Smart Agro</h1>
+          <p class="page-subtitle">Deep Learning Based Pesticides Recommendation Framework for Plant Disease Control</p>
+        </div>
+        <div class="content-panel" style="margin-bottom:1rem;">
+          <h2>🎯 Project Overview</h2>
+          <p style="color:var(--text-muted);line-height:1.7;margin-top:0.75rem;">
+            Final year project using a Convolutional Neural Network (CNN) with <strong>39 output classes</strong>
+            trained on the PlantVillage dataset. Upload a 224×224 leaf image to detect disease and get pesticide advice.
+          </p>
+        </div>
+        <div class="content-panel">
+          <h2>💻 Technology</h2>
+          <ul style="margin:0.75rem 0 0 1.25rem;color:var(--text-muted);line-height:1.8;">
+            <li><strong>Deep Learning:</strong> PyTorch CNN (Conv2d → BatchNorm → MaxPool ×4 → Linear 1024 → 39)</li>
+            <li><strong>Backend:</strong> Flask (Python)</li>
+            <li><strong>Frontend:</strong> HTML, CSS, JavaScript — responsive design</li>
+            <li><strong>Parameters:</strong> 52,595,399 trainable · Input 224×224 RGB</li>
+          </ul>
+        </div>
+        <div class="model-img-wrap" style="max-width:900px;margin-top:1.25rem;">
+          <img src="assets/images/model-architecture.png" alt="CNN architecture" />
+        </div>
+      </main>
+      <footer class="site-footer">🌱 Smart Agro • Deep Learning • CNN • Plant Disease Detection • Final Year Project</footer>
+    </div>
+  </div>
+  <script src="js/particles.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

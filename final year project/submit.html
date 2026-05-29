@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Agro | Processing…</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <div class="app-shell" style="justify-content: center;">
+    <div class="main-wrap" style="max-width: 720px; margin: auto;">
+      <header class="report-header">
+        <div class="logo-text">SMART AGRO</div>
+        <p class="logo-sub">Department of CSE (Artificial Intelligence), PEC</p>
+      </header>
+
+      <main class="page-view page-enter" style="text-align: center;">
+        <h2 class="page-title">CNN Inference Running</h2>
+        <p class="page-subtitle">Conv2d → BatchNorm → MaxPool → Linear (39 classes)</p>
+        <div class="result-image-wrap" style="display: block; margin: 1.5rem auto; max-width: 280px;">
+          <img id="submit-preview" src="assets/images/sample-leaf-apple-black-rot.png" alt="Processing leaf" />
+        </div>
+        <div class="model-img-wrap" style="max-width: 100%;">
+          <img src="assets/images/model-architecture.png" alt="Model architecture" style="max-height: 200px; width: auto; margin: 0 auto;" />
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="loader" class="loader-overlay active" role="status" aria-live="polite">
+    <div class="loader-ring"></div>
+    <p>Smart Agro AI analyzing plant image 🌱</p>
+  </div>
+
+  <script src="js/particles.js"></script>
+  <script>
+    const img = sessionStorage.getItem("smartAgroImage");
+    if (img) document.getElementById("submit-preview").src = img;
+  </script>
+  <script src="js/submit.js"></script>
+</body>
+</html>

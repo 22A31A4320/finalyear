@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Agro — Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <button type="button" class="menu-toggle" aria-label="Menu">☰</button>
+  <div class="sidebar-backdrop"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Smart Agro Deep Learning Pesticides Recommendation Framework</h1>
+      </div>
+      <ul class="nav-tabs">
+        <li><a href="home.html" class="nav-tab active"><span class="icon">🏠</span> Home</a></li>
+        <li><a href="result.html" class="nav-tab"><span class="icon">📈</span> Result</a></li>
+      </ul>
+    </aside>
+
+    <div class="main-wrap">
+      <nav class="top-nav" aria-label="Sections">
+        <a href="disease.html">Disease</a>
+        <a href="pesticides.html">Pesticides</a>
+        <a href="about.html">About</a>
+        <a href="user-guide.html">Guide</a>
+        <a href="team.html">Team</a>
+      </nav>
+
+      <main class="page-view">
+        <section class="upload-section">
+          <div class="upload-card" id="upload-zone">
+            <div id="upload-placeholder">
+              <div class="upload-sprout">🌱</div>
+              <h3>Upload Plant Leaf Image</h3>
+              <p class="upload-hint">Click here or drag &amp; drop your leaf image</p>
+              <p class="upload-file-status" id="file-status">No file chosen — Click to browse</p>
+            </div>
+            <img id="upload-preview" class="upload-preview" alt="Selected leaf" />
+            <input type="file" id="file-input" accept="image/png,image/jpeg,image/jpg,image/gif,image/webp" />
+            <button type="button" class="btn btn-primary" id="upload-btn" disabled>
+              ☁️ Upload &amp; Analyze
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        🌱 Smart Agro • Deep Learning • CNN • Plant Disease Detection • Final Year Project
+      </footer>
+    </div>
+  </div>
+
+  <div id="loader" class="loader-overlay" role="status">
+    <div class="loader-ring"></div>
+    <p>Analyzing with CNN (39 classes)…</p>
+  </div>
+
+  <script src="js/classes.js"></script>
+  <script src="js/disease-db.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/confetti.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Agro | Prediction Input — 6.4.3</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <button type="button" class="menu-toggle" aria-label="Open menu">☰</button>
+  <div class="sidebar-backdrop"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🌾</div>
+        <h1>Smart Agro</h1>
+        <p>Deep Learning Based Pesticides Recommendation Framework for Plant Disease Control</p>
+      </div>
+      <ul class="nav-tabs">
+        <li><a href="home.html" class="nav-tab active"><span class="icon">🏠</span> Home</a></li>
+        <li><a href="result.html" class="nav-tab"><span class="icon">📊</span> Result</a></li>
+      </ul>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="report-header">
+        <div class="logo-text">SMART AGRO</div>
+        <p class="logo-sub">Department of CSE (Artificial Intelligence), PEC</p>
+      </header>
+
+      <main class="page-view">
+        <h2 class="page-title">Prediction Input — Pesticide Recommendation</h2>
+        <p class="page-subtitle">
+          Review uploaded image and CNN model before running inference (39-class output).
+        </p>
+
+        <div class="split-result">
+          <div>
+            <h3 style="color: var(--accent); margin-bottom: 0.75rem;">Input Image (224×224)</h3>
+            <div class="result-image-wrap" style="display: block;">
+              <img id="predict-input-preview" src="assets/images/sample-leaf-apple-black-rot.png" alt="Input leaf for prediction" />
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem;">
+              Image preprocessed for Conv2d layers · BatchNorm · MaxPool pipeline.
+            </p>
+          </div>
+          <div>
+            <h3 style="color: var(--accent); margin-bottom: 0.75rem;">CNN Architecture</h3>
+            <div class="model-img-wrap">
+              <img src="assets/images/model-architecture.png" alt="Model layer summary" />
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem;">
+              Total params: 52,595,399 · Output: Linear-33 → 39 classes
+            </p>
+            <button type="button" class="btn btn-primary" id="run-predict-btn" style="margin-top: 1.25rem;">
+              Run Prediction →
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="loader" class="loader-overlay" role="status" aria-live="polite">
+    <div class="loader-ring"></div>
+    <p>Running CNN inference…</p>
+  </div>
+
+  <script src="js/particles.js"></script>
+  <script src="js/layout.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const img = sessionStorage.getItem("smartAgroImage");
+      const preview = document.getElementById("predict-input-preview");
+      if (img && preview) preview.src = img;
+
+      document.getElementById("run-predict-btn").addEventListener("click", () => {
+        document.getElementById("loader").classList.add("active");
+        window.location.href = "submit.html";
+      });
+    });
+  </script>
+</body>
+</html>
